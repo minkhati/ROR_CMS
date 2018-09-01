@@ -1,12 +1,12 @@
 class DemoController < ApplicationController
-  layout false
+  layout 'application' # By default use application layout file 
 
   def index
-    render('hello')
+    
   end
 
   def hello
-    render('index')
+    
   end
 
   def otherhello
@@ -15,5 +15,9 @@ class DemoController < ApplicationController
 
   def lynda
     redirect_to('http://lynda.com')
+  end
+
+  def escape_output
+
   end
 end

@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'demo/hello'
   get 'demo/otherhello'
   get 'demo/lynda'
+  get 'demo/escape_output'
   
   # Default route
   # get ':controller(/:action/(:id))'
