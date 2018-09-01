@@ -1,6 +1,10 @@
 class SubjectsController < ApplicationController
+  layout 'admin' # specify the layout file used, by default application 
+
+
   def index
     @subjects = Subject.sorted
+    
   end
 
   def show
