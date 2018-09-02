@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   post 'access/attempt_login'
   get 'access/logout'
 
+  resources :admin_users, except: [:show] do
+    member do
+      get :delete
+    end
+  end
+  
   # delete is not included in resources by default
   resources :subjects do
     member do
