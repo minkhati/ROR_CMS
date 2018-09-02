@@ -9,13 +9,13 @@ class Page < ApplicationRecord
     scope :sorted, lambda { order("position ASC")}
     scope :newest_first, lambda { order("created_at DESC")}
 
-    validates_presence_of :name
-    validates_length_of :name, maximum: 40
-    # use presence_of with length_of to disallow spaces 
-    validates_presence_of :permalink
-    validates_length_of :permalink, within: 3..255
+    validates :name, 
+        presence: true, 
+        length: { maximum: 40 }
 
-    validates_uniqueness_of :permalink
-    # for unique value by subject use "scope: :subject_id"
+    validates :permalink, 
+        presence: true, 
+        length: { within: 3..50 }, 
+        uniqueness: true
      
 end
