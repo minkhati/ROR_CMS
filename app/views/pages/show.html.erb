@@ -1,9 +1,12 @@
 
-<%= link_to("<< Back to List", pages_path, :class => 'back-link') %>
+<% @page_title = "Show Page" %>
+
+<%= link_to("<< Back to List", pages_path(subject_id: @subject.id), :class => 'back-link') %>
 
 <div class="pages show">
     <h2>Show Page</h2>
-    <table summary="page detail view">
+    
+    <table summary="Page detail view">
         <tr>
             <th>Name</th>
             <td><%= @page.name %></td>
