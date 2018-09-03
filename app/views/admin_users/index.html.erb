@@ -6,7 +6,6 @@
     <h2>Admin Users</h2>
 
     <%= link_to('Add New Admin User', new_admin_user_path, class: 'action new') %>
-    
     <div><%= pluralize(@admin_users.size, 'admin user') %> found</div>
 
     <table class="listing" summary="Admin users list">
